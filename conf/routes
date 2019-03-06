@@ -1,1 +1,1 @@
-
+GET     /api/calculations       controllers.ApiController.getCalculations
