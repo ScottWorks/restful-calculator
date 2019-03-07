@@ -1,3 +1,3 @@
 # Motivation
 
-Practicing building REST API's w/ Scala + Play
+Practicing building full CRUD REST API's w/ Scala + Play

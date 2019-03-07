@@ -1,1 +1,11 @@
-GET     /api/calculations       controllers.ApiController.getAllCalculations
+GET         /api/memory               controllers.ApiController.getAllMemory
+
+GET         /api/memory/:id           controllers.ApiController.getMemory(id: Int)
+
+DELETE      /api/memory               controllers.ApiController.removeMemory
+
+POST         /api/memory/               controllers.ApiController.insertMemory
+
+PUT         /api/memory/:id/values/:value               controllers.ApiController.insertValue(id: Int, value: Int)
+
+PUT         /api/memory/:id/operators/:operator               controllers.ApiController.insertOperator(id: Int, operator: String)
