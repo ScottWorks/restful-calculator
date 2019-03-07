@@ -48,7 +48,7 @@ class MemoryRepository {
         if (memory.values.isEmpty) {
           memory.copy(currentValue = value, values = newValues)
         } else {
-          memory.copy(values = newValues)
+          memory.copy(currentValue = calculate(memory.currentValue, value, memory.operators.head), values = newValues)
         }
       } else {
         memory
@@ -74,4 +74,13 @@ class MemoryRepository {
 
     newOperators
   }
+
+  private def calculate(currentValue: Int, value: Int, operator: String): Int = {
+    operator match {
+      case "Add" => currentValue + value
+      case "Subtract" => currentValue - value
+      case "Multiply" => currentValue * value
+      case "Divide" => currentValue / value
+    }
+  } 
 }
